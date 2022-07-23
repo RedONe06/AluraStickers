@@ -1,0 +1,77 @@
+Experiência:
+
+- A primeira tentativa de criação do projeto deu erro
+na cópia do caminho do arquivo rodando pela opção 
+automática para o cmd;
+- Para resolver esse problema, procurei o caminho da 
+classe principal somente pelo terminal do vscode;
+
+Observações da imersão:
+
+- Para a imersão foi preferenciável a menor quantidade de bibliotecas possíveis.
+- Se der um ctrl. em cima de um método, o vs code gera opções. Uma delas é para
+guardar o método em uma variável.
+- Para as versões mais velhas de Java deve ser:
+HttpClient client = HttpClient.newHttpClient();
+já para as versões mais novas, podemos declarar como var pois está claro
+o tipo de variável;
+- No javadoc do HttpClient possui as informações sobre a conexão;
+- O processo de conexão com a API, é praticamente o mesmo processo que um navegador
+passa ao solicitarmos a ele uma url;
+- Usamos bibliotecas (jackson) pareadoras de json para conseguirmos separar os dados, porém, como
+a ideia era não usar bibliotecas, foi feito o código na mão grande por meio de 
+"Expressões regulares";
+- Para criar um mapa: 
+List<Map<tipoDaChave, tipoDoValorAssociado>> listaDeFilmes
+- O comando shift+alt+o adiciona todas as importações do código;
+- O regex usado no projeto só funciona com este json;
+
+Passo a passo:
+
+-> acessar via conexão HTTP, fazer um get no endereço e pegar como resposta 
+o body, guardar em uma String;
+-> filtrar das informações gerais, as informações importantes 
+(titulo, poster, ratting) (parsear os dados);
+-> exibir e mnipulr os dados da melhor maneira;
+
+Termos:
+
+URI: termo gernérico para url;
+HTTP: Protocolo usado para se comunicar na Web;
+Regex: Regular Expresions, passa um código sobre um texto e separa somente o que
+passar pelos parâmetros/padrões;
+Map: associação de uma chave com um valor;
+EndPoint: caminho da API;
+
+Indicações e sites:
+
+Regex101.com: 
+https://regex101.com/
+para lidar com regex mais dinamicamente;
+IMDB: https://www.imdb.com/chart/top/
+Documentação da API: https://imdb-api.com/api;
+Documentação da classe HttpRequest: https://docs.oracle.com/en/java/javase/17/docs/api/java.net.http/java/net/http/HttpRequest.html
+Biblioteca Jackson: https://github.com/FasterXML/jackson
+Como deixar as anotações no read me: https://www.alura.com.br/artigos/escrever-bom-readme;
+Como pintar o terminal: https://www.alura.com.br/artigos/decorando-terminal-cores-emojis
+
+Desafios:
+
+- Consumir o endpoint de filmes mais populares da API do IMDB.
+Procure também, na documentação da API do IMDB, o endpoint que
+retorna as melhores séries e o que retorna as séries mais populares.
+
+- Usar sua criatividade para deixar a saída dos dados mais bonitinha:
+usar emojis com código UTF-8, mostrar a nota do filme como estrelinhas,
+decorar o terminal com cores, negrito e itálico usando códigos ANSI, e mais!
+
+- Colocar a chave da API do IMDB em algum lugar fora do código como 
+um arquivo de configuração (p. ex, um arquivo .properties) ou 
+uma variável de ambiente
+
+- Mudar o JsonParser para usar uma biblioteca de parsing de JSON 
+como Jackson ou GSON
+
+- Desafio supremo: criar alguma maneira para você dar uma avaliação 
+ao filme, puxando de algum arquivo de configuração OU pedindo a 
+avaliação para o usuário digitar no terminal.
