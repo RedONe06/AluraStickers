@@ -1,9 +1,11 @@
 Experiência:
+
 - Erro dizendo que o Graphics2D não poderia ser um tipo;
 Pra resolver copiei a linha de código de um colega, onde ele declarava.
 A IDE reconheceu os parâmetros e rodou;
 
 Observações da imersão:
+
 - Como a API estava trazendo as imagens em thumbnail, pegamos o caminho da imagem
 e retiramos o último conteúdeo antes do @, assim ela fica em tamanho poster;  
 - Ao invés de ter que baixar todas as imagens, lemos no gerador um InputStream;
@@ -12,6 +14,7 @@ de que estava funcionando, generalizamos a entrada para InputStream e a saída
 para o nome do arquivo passado como parâmetro no método criar;
 
 Passo a passo:
+
 - criar uma classe pra gerar as figurinhas
 - criar um método para criar as figurinhas. Este método deve: ler a imagem, redimencionr
 escrever lgo, aplicar transparência e salvar;
@@ -22,7 +25,19 @@ InputStream: classe abstrata que representa uma fonte de bytes (corrente de byte
 Polimorfismo: habilidade de poder tratar o objeto de diversas formas; 
 
 Indicações e sites:
+
+- Documentação do pacote javax.imageio que trata de leitura e escrita de imagens;
+https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/imageio/package-summary.html
+- Documentação da classe BufferedImage que representa um imagem no java;
+https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/image/BufferedImage.html
+- Documentação da classe Graphics2D,  “caneta” que permite escrever, desenhar e imprimir outras imagens
+ em uma imagem original.
+ https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/Graphics2D.html 
+- Documentação da abstração InputStream, que representa um fluxo de leitura de dados de qualquer fonte, como arquivos, URLs, entre outros.
+https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html
+
 Desafios:
+
 - Ler a documentação da classe abstrata InputStream.
 - Centralizar o texto na figurinha.
 - Fazer um pacote no Whatsapp e/ou Telegram com as suas próprias figurinhas!
